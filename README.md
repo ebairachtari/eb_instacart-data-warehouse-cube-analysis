@@ -100,5 +100,6 @@ eb_DataWarehouse.zip                            -- Ολόκληρο το Visual 
 
 ```bash
 pip install -r requirements.txt
+```
 
 >*Αναπτύχθηκε αποκλειστικά για εκπαιδευτικούς σκοπούς.*
