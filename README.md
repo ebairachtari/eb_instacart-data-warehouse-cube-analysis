@@ -94,5 +94,11 @@ eb_DataWarehouse.zip                            -- Ολόκληρο το Visual 
   * Εφαρμόζει τον αλγόριθμο **Apriori**
   * Φιλτράρει τους κανόνες με βάση support, confidence και lift
   * Οπτικοποιεί τους top 5 κανόνες
+ 
+ ### Εγκατάσταση απαιτούμενων πακέτων
+Το script `instacart_apriori_association_rules.py` απαιτεί τα παρακάτω πακέτα:
+
+```bash
+pip install -r requirements.txt
 
 >*Αναπτύχθηκε αποκλειστικά για εκπαιδευτικούς σκοπούς.*
