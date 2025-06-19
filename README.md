@@ -67,7 +67,7 @@ eb_DataWarehouse.zip                            -- Ολόκληρο το Visual 
 
 ---
 
-### 2Υλοποίηση και Περιήγηση στον OLAP Κύβο
+### Υλοποίηση και Περιήγηση στον OLAP Κύβο
 
 * Άνοιξτε το αρχείο `eb_Instacart.sln` με το Visual Studio (με SSAS Extension)
 * Κάνετε **Deploy** και **Process** τον κύβο στον Analysis Services Server
