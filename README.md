@@ -85,7 +85,7 @@ eb_DataWarehouse.zip                            -- Ολόκληρο το Visual 
   * Μέσο καλάθι ανά loyalty profile
   * Top time slots και aisles
 
-### 4Εξαγωγή Κανόνων Συσχέτισης
+### Εξαγωγή Κανόνων Συσχέτισης
 
 * Τρέξτε το script `instacart_apriori_association_rules.py`
 * Το script:
