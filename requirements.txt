@@ -1,0 +1,4 @@
+pandas>=1.4
+mlxtend>=0.21
+matplotlib>=3.5
+sqlalchemy
