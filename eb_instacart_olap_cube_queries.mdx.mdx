@@ -1,0 +1,43 @@
+-- Ανάλυση αριθμού παραγγελιών ανά κατηγορία χρήστη
+SELECT 
+  [User].[Frequency Category].Children ON ROWS,
+  [Measures].[Fact Orders Count] ON COLUMNS
+FROM 
+  [Eb_Instacart]
+
+
+--Κατανάλωση προϊόντων ανά ώρα ημέρας για χρήστες που παραγγέλνουν ξανά συστηματικά
+SELECT 
+  [Time].[Part Of Day Category].Children ON COLUMNS,
+  [Product].[Department].Children ON ROWS
+FROM 
+  [Eb_Instacart]
+WHERE 
+  ([User].[Reorder Category].[loyal])
+  
+
+-- Top συνδυασμοί Time Slot και κατηγορία προϊόντος ανά Frequency Category
+SELECT
+  [User].[Frequency Category].Children ON COLUMNS,
+  HEAD(
+    ORDER(
+      NONEMPTY(
+        [Product].[Aisle].Children *
+        [Time].[Time Slot Label].Children,
+        [Measures].[Fact Orders Count]
+      ),
+      [Measures].[Fact Orders Count],
+      BDESC
+    ),
+    10
+  ) ON ROWS
+FROM [Eb_Instacart]
+WHERE ([Measures].[Fact Orders Count])
+
+
+-- Συμπεριφορά παραγγελίας ανά Time Slot και Frequency Category
+SELECT
+  [Time].[Time Slot Label].Children ON ROWS,
+  [User].[Frequency Category].Children ON COLUMNS
+FROM [Eb_Instacart]
+WHERE ([Measures].[Fact Orders Count])
